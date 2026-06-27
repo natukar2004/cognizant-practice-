@@ -12,12 +12,12 @@ public class Inventory {
             return false;
         }
 
-        if (products.containsKey(product.getId())) {
-            System.out.println("Product with ID " + product.getId() + " already exists.");
+        if (products.containsKey(product.getProductId())) {
+            System.out.println("Product with ID " + product.getProductId() + " already exists.");
             return false;
         }
 
-        products.put(product.getId(), product);
+        products.put(product.getProductId(), product);
         return true;
     }
 
@@ -33,7 +33,7 @@ public class Inventory {
         }
 
         if (name != null) {
-            product.setName(name);
+            product.setProductName(name);
         }
         if (quantity != null) {
             product.setQuantity(quantity);
